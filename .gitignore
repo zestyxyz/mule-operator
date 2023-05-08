@@ -4,6 +4,7 @@
 **/Temp
 **/UserSettings
 **/*BackUpThisFolder*
+**/obj/Debug
 *.sln
 *csproj*
 *.cache
