@@ -15,6 +15,8 @@ public class ServerConnection : MonoBehaviour
     {
         connection = new TCPConnection();
         connection.ConnectToServer(serverIP, serverPort);
+        if (connection.IsConnectionValid())
+        { }
     }
 
     // Update is called once per frame

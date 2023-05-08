@@ -3,7 +3,7 @@ using System.IO;
 using System.Net.Sockets;
 using UnityEngine;
 
-public class TCPConnection 
+public class TCPConnection
 {
 
     private TcpClient client;
@@ -11,7 +11,9 @@ public class TCPConnection
     private StreamReader streamReader;
     private StreamWriter streamWriter;
 
-    public TCPConnection() { }
+    //Commented out the below line for testing / because I wasn't sure if it was necessary or why it's here
+    //public TCPConnection() { }
+
     public void ConnectToServer(string serverIP, int serverPort)
     {
         try
@@ -31,8 +33,12 @@ public class TCPConnection
 
     public bool IsConnectionValid()
     {
-        return client.Connected;
+        if (client != null && client.Connected)
+            return true;
+        else
+            return false;
     }
+
     public string SendJsonMessage(object messageObject)
     {
         if (client == null || !client.Connected)
@@ -56,7 +62,7 @@ public class TCPConnection
             return null;
         }
     }
-    
+
     public void DisconnectFromServer()
     {
         if (client != null)
