@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{f68a884d-8137-a9de-f230-2070231f3fd3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.WebRTC.Samples", "Unity.WebRTC.Samples.csproj", "{e4712d48-dd0f-f7dc-2647-438079624f5b}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{a3eb1fd9-d167-9ffc-929d-bde0767c741b}"
 EndProject
 Global
@@ -12,6 +14,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{f68a884d-8137-a9de-f230-2070231f3fd3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f68a884d-8137-a9de-f230-2070231f3fd3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e4712d48-dd0f-f7dc-2647-438079624f5b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e4712d48-dd0f-f7dc-2647-438079624f5b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a3eb1fd9-d167-9ffc-929d-bde0767c741b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a3eb1fd9-d167-9ffc-929d-bde0767c741b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
