@@ -1,8 +1,9 @@
 **/Library
 **/Logs
-**/Packages
 **/Temp
 **/UserSettings
 **/*BackUpThisFolder*
+**/obj/Debug
 *.sln
 *csproj*
+*.cache
