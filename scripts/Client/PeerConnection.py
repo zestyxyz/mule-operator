@@ -168,7 +168,8 @@ class PeerConnection:
             message.room = room
             print(f"[INFO] sending offer ... ")
             try:
-                await sio.emit('offer', message.to_json())
+                # await sio.emit('offer', message.to_json())
+                await sio.send(message.to_json())
                 print("[INFO] offer sent!")
             except Exception as e:
                 print(f"[ERROR] error in sending offer: {e}")

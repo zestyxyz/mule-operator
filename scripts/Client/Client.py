@@ -105,6 +105,7 @@ class Client:
             print("[INFO] set remote description from answer!")   
         except Exception as e:
             print(f"[ERROR] in setting the remote description from answer with message {e}")
+            
     async def on_candidate_(self, message):
         await self.peer_connection_.add_remote_candidate(message)
         

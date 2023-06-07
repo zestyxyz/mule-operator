@@ -11,6 +11,8 @@ class JoinMessage:
         self.type = ""
         self.room = ""
         self.name = ""
+        self.client_type = ""
+        
     def to_json(self):
         return json.dumps(self.__dict__)
     
@@ -30,12 +32,7 @@ class OfferMessage:
         self.room = ""
     
     def to_json(self):
-        return {
-            'origin': self.origin,
-            'type': self.type,
-            'sdp': self.sdp,
-            'room': self.room
-        }
+        return json.dumps(self.__dict__)
 
 class AnswerMessage:
     def __init__(self):
@@ -62,6 +59,13 @@ class AnswerMessage:
             print(f"[ERROR] in creating answer from json with message: {e}")
             return None
                 
+class ClientTypeMessage:
+    def __init__(self):
+        self.type = ""
+        self.client_type = ""
+    
+    def to_json(self):
+        return json.dumps(self.__dict__)
     
 class CandidateMessage:
     def __init__(self):
