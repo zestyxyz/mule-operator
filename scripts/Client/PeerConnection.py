@@ -19,6 +19,8 @@ from MediaTrack import MediaTrack
 
 class PeerConnection:
     def __init__(self):
+        print(f"[INFO] set the ice servers ... ")
+        
         config = RTCConfiguration()
         config.iceServers = [
             RTCIceServer(urls="stun:openrelay.metered.ca:80"),
@@ -35,8 +37,17 @@ class PeerConnection:
                 username="openrelayproject",
                 credential="openrelayproject"),
         ]
-        self.pc_ = RTCPeerConnection()
+        print(f"[INFO] configs set!")
+        try:
+            self.pc_ = RTCPeerConnection()
+            print(f"[INFO] setting the callback functions ... ")
+        except Exception as e:
+            print(f"[ERROR] error creating the peer connection object: {e}")
+            sys.exit(1)
+            
         self.setup_()
+        
+        print("[INFO] created the peer connection object ")
     
     def add_data_channel_(self, label):
         print(f"[INFO] creating data channel with label: {label}")

@@ -84,10 +84,8 @@ class Client:
         await self.create_peer_connection()
     
     async def on_answer_(self, message):
-        print("=========")
         print(f"[INFO] received answer: {message}")
 
-        
         remote_description = RTCSessionDescription(
             sdp = message["sdp"],
             type = "answer"
@@ -113,15 +111,14 @@ class Client:
         self.name_ = name
           
     async def create_peer_connection(self):
-        print("[INFO] creating peer connection...")
+        print("[INFO] creating peer connection ...")
         self.peer_connection_ = PeerConnection()
+        print("[INFO] created peer connection!")
+        
+        print("[INFO] sending offer...")
         await self.peer_connection_.send_offer(self.socket_, Client.room)
-        
+        print("[INFO] sent offer!")
     
-    async def on_client_connected_(self, message):
-        print(f"[INFO] client connected with message: {message}")
-        await self.create_peer_connection()
-        
     async def join(self, room):
         print(f"[INFO] joining room: {room}")
         message = JoinMessage()
